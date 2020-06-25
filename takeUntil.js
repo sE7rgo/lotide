@@ -5,9 +5,9 @@ const takeUntil = function(array, callback) {
   const result = [];
   for (let item of array) {
     if (!callback(item))
-    result.push(item);
+      result.push(item);
     else
-    break;
+      break;
   }
   return result;
 };
@@ -15,7 +15,7 @@ const takeUntil = function(array, callback) {
 
 const eqArrays = function(firstArray, secondArray) {
   let output;
-  if (firstArray.length !== secondArray.length){
+  if (firstArray.length !== secondArray.length) {
     return false;
   }
   for (let i = 0; i < firstArray.length; i++) {
@@ -27,10 +27,10 @@ const eqArrays = function(firstArray, secondArray) {
 
 const assertArraysEqual = function(firstArray, secondArray) {
   output = `🛑🛑🛑 Assertion Failed: ${firstArray} !== ${secondArray}`;
-  if (eqArrays(firstArray, secondArray)) {  
-   output = `✅✅✅ Assertion Passed: ${firstArray} === ${secondArray}`;
+  if (eqArrays(firstArray, secondArray)) {
+    output = `✅✅✅ Assertion Passed: ${firstArray} === ${secondArray}`;
   }
-  return output
+  return output;
 };
 
 const results1 = takeUntil(data1, x => x < 0);
