@@ -19,6 +19,7 @@ module.exports = {
   middle,
   countLetters,
   countOnly,
+  eqArrays,
   eqObjects,
   assertObjectsEqual,
   findKey,
@@ -27,5 +28,4 @@ module.exports = {
   map,
   takeUntil,
   without,
-  eqArrays
 };
